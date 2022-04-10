@@ -16,12 +16,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
 
-SRC = src/push_swap.c src/error.c src/parse.c src/free.c \
+SRC = src/push_swap.c src/error.c src/parse.c src/free.c src/algo3.c \
 	src/is_sorted.c src/operation/swap.c src/operation/reverse_rotate.c \
-	src/operation/rotate.c src/operation/push.c \
+	src/operation/rotate.c src/operation/push.c src/algo2.c \
 	src/algo.c src/init.c src/big_algo.c src/algo_reverse.c \
 	src/rotate_chunk.c src/which_algo.c src/split_a.c src/split_b.c \
-	src/split_utils.c src/index.c
+	src/split_utils.c src/index.c src/algo_utils.c src/size_to_split.c
 
 
 HEADER = -I include -I libft

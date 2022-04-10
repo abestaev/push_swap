@@ -1,43 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_chunk.c                                     :+:      :+:    :+:   */
+/*   algo_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abestaev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 04:55:42 by abestaev          #+#    #+#             */
-/*   Updated: 2022/04/10 04:57:06 by abestaev         ###   ########.fr       */
+/*   Created: 2022/04/10 06:33:15 by abestaev          #+#    #+#             */
+/*   Updated: 2022/04/10 06:33:17 by abestaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_push_rotate_chunk(t_data *data)
+void	ft_reset_position(t_list *lst)
 {
-	int	i;
+	t_list	*tmp;
+	int		i;
 
-	data->size_a = data->size_a - data->nombre_trie;
-	i = data->nombre_trie;
-	while (data->b)
-		pa(data);
-	if (data->size_a != 0)
+	tmp = lst;
+	i = 0;
+	while (tmp)
 	{
-		while (i != 0)
-		{
-			ra(data, 1);
-			i--;
-		}
+		tmp->position = i;
+		i++;
+		tmp = tmp->next;
 	}
 }
 
-void	ft_rotate_len(t_data *data, int len)
+int	ft_find_max(t_list *lst, int len)
 {
-	while (len != 0)
+	t_list	*tmp;
+	int		max;
+	int		position;
+
+	if (lst == NULL)
+		exit(1);
+	tmp = lst;
+	max = tmp->content;
+	position = tmp->position;
+	while (tmp && len > 0)
 	{
-		data->nombre_trie = 0;
-		ra(data, 1);
+		if (tmp->content > max)
+		{
+			position = tmp->position;
+			max = tmp->content;
+		}
 		len--;
-		data->nombre_trie++;
-		data->size_a--;
+		tmp = tmp->next;
 	}
+	return (position);
 }

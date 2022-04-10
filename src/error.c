@@ -6,7 +6,7 @@
 /*   By: abestaev <abestaev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 10:19:30 by abestaev          #+#    #+#             */
-/*   Updated: 2022/03/23 10:21:09 by abestaev         ###   ########.fr       */
+/*   Updated: 2022/04/10 05:08:40 by abestaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	ft_check_doublons(char **tab)
 {
 	int	i;
 	int	j;
-	int tmp1;
-	int tmp2;
+	int	tmp1;
+	int	tmp2;
 
 	i = 0;
 	while (tab && tab[i])
@@ -60,10 +60,11 @@ int	ft_check_doublons(char **tab)
 //filtre tout les nombres trop grands
 int	ft_check_size(char *str)
 {
-	char *newstr;
-	int	len;
-	int error = 0;
+	char	*newstr;
+	int		len;
+	int		error;
 
+	error = 0;
 	newstr = ft_clean(str);
 	len = ft_strlen(newstr);
 	if (str[0] == '-')

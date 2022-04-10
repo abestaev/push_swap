@@ -6,7 +6,7 @@
 /*   By: abestaev <abestaev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 19:21:36 by abestaev          #+#    #+#             */
-/*   Updated: 2022/04/08 19:22:04 by abestaev         ###   ########.fr       */
+/*   Updated: 2022/04/10 05:36:46 by abestaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ void	ft_free(t_data *data)
 		free(data->b);
 		data->b = tmp2;
 	}
-	//free(data->chunk_tab);
 }

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   printf.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abestaev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/10 05:19:06 by abestaev          #+#    #+#             */
+/*   Updated: 2022/04/10 05:19:22 by abestaev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
-void    ft_printflst(t_data *data)
+/*void    ft_printflst(t_data *data)
 {
     t_list *courant;
     
@@ -36,4 +48,4 @@ void    ft_printflst(t_data *data)
         courant = courant->next;
     }
     printf("\n");
-}
+}*/

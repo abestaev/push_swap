@@ -22,6 +22,7 @@
 typedef struct s_data {
 	t_list	*a;
 	t_list	*b;
+	t_list	*tmp;
 	int		size_a;
 	int		size_total_a;
 	int		nombre_trie;
@@ -37,6 +38,7 @@ void	ft_error(char *str, char **tab);
 int		ft_check_args(char **tab);
 
 t_data	ft_init(int argc, char **agrv);
+void	ft_init_2(t_data *data);
 void	ft_free(t_data *data);
 
 void	sa(t_data *data, int oui);
@@ -92,5 +94,17 @@ void	ft_clean_index_a(t_data *data);
 void	ft_index_tmp_2(t_data *data);
 int		ft_size_to_split_5(t_data *data);
 int		ft_size_to_split(t_data *data);
+
+void	ft_algo_sub_5(t_data *data);
+void	ft_algo_sub_10(t_data *data);
+void	ft_algo_top_10(t_data *data);
+void	ft_algo_top_10_bis(t_data *data);
+
+void	ft_reverse_algo_bis(t_data *data, int stacklen);
+
+void	ft_algo5_push_min5(t_data *data);
+void	ft_algo5_push_min4(t_data *data);
+
+int		ft_splitstack_a_bis(t_data *data, int count2);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: abestaev <abestaev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 17:52:36 by abestaev          #+#    #+#             */
-/*   Updated: 2022/04/10 06:23:22 by abestaev         ###   ########.fr       */
+/*   Updated: 2022/04/10 07:01:09 by abestaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ void		ft_putnbr_fd(int n, int fd);
 
 typedef struct s_list
 {
-	int		content;
-	int		index;
-	int		index_tmp;
-	int		position;
+	int				content;
+	int				index;
+	int				index_tmp;
+	int				position;
 	struct s_list	*next;
 }	t_list;
 

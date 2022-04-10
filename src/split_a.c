@@ -16,9 +16,7 @@ void	ft_splitstack_a_small(t_data *data, int size)
 {
 	t_list	*tmp;
 	int		count;
-	int		way;
 
-	way = ft_which_way(data, size);
 	count = 0;
 	tmp = data->a;
 	while (count < size / 2)
@@ -32,16 +30,8 @@ void	ft_splitstack_a_small(t_data *data, int size)
 		}
 		else
 		{
-			if (way == 42)
-			{
-				tmp = ft_lstlast(data->a);
-				rra(data, 1);
-			}
-			else
-			{
-				tmp = tmp->next;
-				ra(data, 1);
-			}
+			tmp = tmp->next;
+			ra(data, 1);
 		}
 	}
 }
@@ -71,8 +61,12 @@ void	ft_splitstack_a(t_data *data, int size)
 		}
 	}
 	while (count2 != 0)
-	{
-		rra(data, 1);
-		count2--;
-	}
+		count2 = ft_splitstack_a_bis(data, count2);
+}
+
+int	ft_splitstack_a_bis(t_data *data, int count2)
+{
+	rra(data, 1);
+	count2--;
+	return (count2);
 }
